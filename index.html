@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todd Hurray - Portfolio</title>
+    <title>Todd Hurray - Web Developer</title>
     <style>
         * {
             margin: 0;
@@ -12,86 +12,172 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            color: #1a1a1a;
+            background: #f8f9fa;
             padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             text-align: center;
         }
         
-        h1 {
-            margin: 20px 0 10px 0;
-            font-size: 2.5rem;
-        }
-        
-        img {
-            width: 150px;
-            height: 150px;
+        .profile-img {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            margin: 20px 0;
             object-fit: cover;
+            border: 4px solid #0077b5;
+            margin-bottom: 20px;
         }
         
-        p {
-            margin: 20px 0;
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #0a66c2;
+        }
+        
+        .bio {
             font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
         }
         
         .social-links {
             margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
         }
         
         .social-links a {
-            display: inline-block;
-            margin: 8px;
             padding: 12px 24px;
             background: #0077b5;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
         }
         
         .social-links a:hover {
-            opacity: 0.8;
+            background: #005885;
+            transform: translateY(-2px);
         }
         
-        h2 {
-            margin: 40px 0 20px 0;
-        }
-        
-        ul {
-            list-style: none;
+        .section-title {
+            font-size: 1.8rem;
+            margin: 50px 0 25px 0;
+            color: #0a66c2;
             text-align: left;
-            display: inline-block;
         }
         
-        li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #f5f5f5;
-            border-radius: 5px;
+        .project-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: left;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .project-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .tech-tags {
+            margin: 15px 0;
+        }
+        
+        .tech-tags span {
+            display: inline-block;
+            background: #e7f3ff;
+            color: #0077b5;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0 5px 5px 0;
+            font-weight: 500;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #0077b5;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Todd Hurray</h1>
-
-       <img src="https://github.com/toddhurray.png" alt="Todd Hurray">
-    
-    <p>Web Developer based in Limbe, Cameroon</p>
-    
-    <div class="social-links">
-        <a href="mailto:toddhurray@gmail.com">Email Me</a>
-        <a href="https://cm.linkedin.com/in/todd-harrey-7b8b14405" target="_blank">LinkedIn</a>
-        <a href="https://wa.me/237652477562" target="_blank">WhatsApp</a>
+    <div class="container">
+        <!-- Use your same profile image URL -->
+        <img class="profile-img" src="https://github.com/toddhurray.png" alt="Todd Hurray">
+        
+        <h1>Todd Hurray</h1>
+        <p class="bio">Web Developer based in Limbe, Cameroon</p>
+        
+        <div class="social-links">
+            <a href="mailto:toddhurray@gmail.com">Email Me</a>
+            <a href="https://cm.linkedin.com/in/todd-harrey-7b8b14405" target="_blank">LinkedIn</a>
+            <a href="https://wa.me/237652477562" target="_blank">WhatsApp</a>
+        </div>
+        
+        <h2 class="section-title">My Projects</h2>
+        
+        <!-- PROJECT 1: CALCULATOR APP -->
+        <div class="project-card">
+            <h3>Calculator App</h3>
+            <p>A clean, responsive calculator that handles basic arithmetic. Built with vanilla JavaScript and modern CSS.</p>
+            
+            <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            
+            <div class="project-links">
+                <a href="#" target="_blank">View Live →</a>
+                <a href="#" target="_blank">View Code →</a>
+            </div>
+        </div>
+        
+        <!-- ADD MORE PROJECTS HERE - Copy/paste the whole "project-card" div above -->
+        
     </div>
-    
-    <h2>My Projects</h2>
-    <ul>
-        <li><strong>Calculator App</strong> - Coming Soon. Built with HTML, CSS, JavaScript.</li>
-    </ul>
 </body>
 </html>
